@@ -1,0 +1,69 @@
+/* Define page-wide styles */
+html, body, .page {
+    height: 100%;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    font-size: 6.5vmax;
+    background: black;
+}
+
+a, .text {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Define section-specific styles */
+.page {
+    display: flex;
+    flex-direction: row;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 6;
+}
+
+.links {
+    margin-top: auto;
+    margin-bottom: 1vh;
+}
+
+.animations {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+
+/* Animations */
+.ball {
+    display: flex;
+    justify-self: right;
+
+    width: 12vmin;
+    height: 12vmin;
+    border-radius: 50%;
+    background-color: rgb(251, 255, 0);
+
+    animation: bounce 0.5s;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.5,0.05,1,.5);
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+    from { transform: translate3d(0, 0, 0);    }
+    to   { transform: translate3d(0, 50vh, 0); }
+}
