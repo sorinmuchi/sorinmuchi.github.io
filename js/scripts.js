@@ -15,4 +15,5 @@ links.forEach(link => {
 /* Define shared functions */
 function changeAnimationSpeed(time) {
     document.getElementsByClassName("ball")[0].style.animationDuration = time;
+    document.getElementsByClassName("ball")[0].style.WebkitAnimationDuration = time;
 }
