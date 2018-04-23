@@ -1,12 +1,15 @@
+/*jshint esversion: 6 */
 /* Select page elements */
-var link = document.getElementsByClassName("links")[0];
+var links = document.querySelectorAll('a');
 
 /* Add event listeners */
-link.addEventListener("mouseover", function() {
-    changeAnimationSpeed('0.25s');
-});
-link.addEventListener("mouseleave", function() {
-    changeAnimationSpeed('0.5s');
+links.forEach(link => {
+    link.addEventListener("mouseover", function() {
+        changeAnimationSpeed('0.25s');
+    });
+    link.addEventListener("mouseleave", function() {
+        changeAnimationSpeed('0.5s');
+    });
 });
 
 /* Define shared functions */
